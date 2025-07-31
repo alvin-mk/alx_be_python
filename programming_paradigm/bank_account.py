@@ -1,4 +1,4 @@
-# programming_paradigm/bank_account.py
+# bank_account.py
 
 class BankAccount:
     def __init__(self, initial_balance=0):
@@ -16,4 +16,4 @@ class BankAccount:
             return False
 
     def display_balance(self):
-        print(f"Current Balance: ${self.__account_balance}")
+        print(f"Current Balance: ${self.__account_balance:.2f}")
