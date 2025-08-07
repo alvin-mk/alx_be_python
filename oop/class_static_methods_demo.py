@@ -1,22 +1,31 @@
-import math
+class Calculator:
+    # Class attribute
+    calculation_type = "Arithmetic Operations"
 
-class Shape:
-    def area(self):
-        raise NotImplementedError("Subclasses must override the area method")
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
+    # Static methods for arithmetic operations
+    @staticmethod
+    def add(a, b):
+        return a + b
 
-class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+    @staticmethod
+    def subtract(a, b):
+        return a - b
 
-    def area(self):
-        return self.length * self.width
+    @staticmethod
+    def multiply(a, b):
+        return a * b
 
+    @staticmethod
+    def divide(a, b):
+        if b == 0:
+            return "Error: Division by zero"
+        return a / b
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
-
-    def area(self):
-        return math.pi * self.radius ** 2
+    # Class method to show calculation type
+    @classmethod
+    def get_calculation_type(cls):
+        return cls.calculation_type
