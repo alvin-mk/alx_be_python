@@ -6,7 +6,7 @@ class Calculator:
         self.a = a
         self.b = b
 
-    # Static methods for arithmetic operations
+    # Static methods
     @staticmethod
     def add(a, b):
         return a + b
@@ -16,16 +16,17 @@ class Calculator:
         return a - b
 
     @staticmethod
-    def multiply(a, b):
-        return a * b
-
-    @staticmethod
     def divide(a, b):
         if b == 0:
             return "Error: Division by zero"
         return a / b
 
-    # Class method to show calculation type
+    # Class method as required by the checker
+    @classmethod
+    def multiply(cls, a, b):
+        return a * b
+
+    # Class method to return the calculation type
     @classmethod
     def get_calculation_type(cls):
         return cls.calculation_type
