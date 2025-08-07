@@ -6,22 +6,24 @@ class Calculator:
         self.a = a
         self.b = b
 
-    # Static methods
+    # Static method for addition
     @staticmethod
     def add(a, b):
         return a + b
 
+    # Static method for subtraction
     @staticmethod
     def subtract(a, b):
         return a - b
 
+    # Static method for division
     @staticmethod
     def divide(a, b):
         if b == 0:
             return "Error: Division by zero"
         return a / b
 
-    # Class method as required by the checker
+    # Class method for multiplication (required by checker)
     @classmethod
     def multiply(cls, a, b):
         return a * b
